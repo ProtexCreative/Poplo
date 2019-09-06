@@ -3,9 +3,11 @@ const express = require('express')
 // Get express router
 const router = express.Router()
 const auth = require('../../middleware/auth')
+// Get express validator to validate the entries 
+const { check, validationResult } = require('express-validator')
 
 const Profile = require('../../models/Profile') // Get the Profile Model
-const User = require('../../models/User')   // Get the User Model
+const User = require('../../models/Users')   // Get the User Model
 
 
 // @route   GET api/profile/me
