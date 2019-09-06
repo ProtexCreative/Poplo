@@ -1,8 +1,14 @@
 // Get the express package
 const express = require('express')
+// Get the db.js from config 
+// db as well as db.js is OK to write
+const connectDB = require('./config/db')
 
 // Create an app from express
 const app = express()
+
+// Connect to MongoDB
+connectDB()
 
 // GET request to API
 app.get('/', (req, res) => res.send('API running'))
