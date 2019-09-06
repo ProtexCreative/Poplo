@@ -10,6 +10,9 @@ const app = express()
 // Connect to MongoDB
 connectDB()
 
+// Initialize Middleware
+app.use(express.json({ extended: false }))
+
 // GET request to API
 app.get('/', (req, res) => res.send('API running'))
 
