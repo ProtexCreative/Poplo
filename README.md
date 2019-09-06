@@ -9,6 +9,9 @@ Campus connect web app.
 * bcrypt
 * config
 * gravatar
+* jsonwebtoken
+* mongoose
+* request
 * react
 * react-redux
 
