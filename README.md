@@ -1,12 +1,12 @@
 # Poplo
-    Campus connect web app.
+Campus connect web app.
 
 ## Contributors
-    * Pratik
-    * Harshal
-    * Anurag
-    * Kaif
-    * Karan
+* Pratik
+* Harshal
+* Anurag
+* Kaif
+* Karan
 
 ## License
-    [MIT](https://choosealicense.com/licenses/mit/)
+[MIT](https://choosealicense.com/licenses/mit/)
