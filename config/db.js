@@ -14,7 +14,8 @@ const connectDB = async () => {
     try {
         await mongoose.connect(db, {
             // A depcrecation warning was passed to the terminal || It is in response to that.
-            useNewUrlParser: true
+            useNewUrlParser: true,
+            useCreateIndex: true
         })
 
         console.log("MongoDB Connected ...")
