@@ -1,7 +1,16 @@
 # Poplo
 Campus connect web app.
 
-## Technologies
+## Packages
+* express
+* express-validator
+* nodemon
+* concurrently
+* bcrypt
+* config
+* gravatar
+* react
+* react-redux
 
 ## Contributors
 * Pratik
