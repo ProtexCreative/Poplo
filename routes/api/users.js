@@ -62,7 +62,7 @@ router.post('/', [
 
         const payload = {   // Create a payload object to send in token.
             user: {
-                username: user.username     //  Get the username from user object.
+                id: user.id     //  Get the id from user object.
             }
         }
 
