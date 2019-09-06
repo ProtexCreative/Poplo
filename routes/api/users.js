@@ -8,9 +8,13 @@ const { check, validationResult } = require('express-validator')
 const gravatar = require('gravatar')
 // Get bcrypt to hash the password
 const bcrypt = require('bcryptjs')
+// Get jsonwebtoken
+const jwt = require('jsonwebtoken')
 
 // Get the User Model
 const User = require('../../models/Users')
+// Get the config file
+const config = require('config')
 
 // @route   POST api/users
 // @desc    Register User
@@ -56,12 +60,22 @@ router.post('/', [
 
         await user.save()   // Save the user object.
 
-        res.send('User registered.')
+        const payload = {   // Create a payload object to send in token.
+            user: {
+                username: user.username     //  Get the username from user object.
+            }
+        }
+
+        // TODO: Change the expiration time at the time of production.
+        jwt.sign(payload, config.get('jwtSecret'), { expiresIn: 36000000 },     // Sign the token, set the jwtSecret, set an expiration time of token
+            (err, token) => {
+                if (err) throw err  // If error available, throw error.
+                res.json({ token })     // Response object will have a token.
+            })
     } catch (err) {
         console.log(err.message)
         res.status(500).send('Server Error!')
     }
-    res.send('User route')
 })
 
 // Export route
