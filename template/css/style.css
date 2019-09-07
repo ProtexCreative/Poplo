@@ -21,10 +21,53 @@
     padding: 0
 }
 
+ul {
+    list-style-type: none;
+    overflow: hidden;
+}
+
+li a {
+    display: block;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: var(--light-color);
+    text-align: center;
+    padding: 14px 16px;
+    float: right
+}
+
+/* Body */
+body {
+    background-image: url('../img/Shapes/Ellipse_2_Cut.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: right top;
+    background-size: 70%
+}
+
 .navbar {
     font-family: 'Roboto', sans-serif;
     font-weight: 700;
     font-size: 30px;
-    color: var(--primary-color);    /* Using hex value stored in variable. */
-    padding-left: 10px 
+    color: var(--primary-color);    /* Using hex value stored in variables. */
+    padding-left: 10px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+
+.footer-bottom {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: var(--dark-color);
+    color: var(--light-color);
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 15px
 }
