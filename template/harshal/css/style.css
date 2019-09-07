@@ -18,7 +18,7 @@
 * {
     box-sizing: border-box;
     margin: 0%;
-    padding: 0
+    padding: 0;
 }
 
 ul {
@@ -29,12 +29,12 @@ ul {
 li a {
     display: block;
     text-decoration: none;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Quicksand', sans-serif;
     font-weight: 400;
     color: var(--light-color);
     text-align: center;
     padding: 14px 16px;
-    float: right
+    float: right;
 }
 
 /* Body */
@@ -44,15 +44,12 @@ body {
     background-attachment: fixed;
     background-position: right top;
     background-size: 70%;
-    font-family: 'Quicksand', sans-serif;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: top;
-    text-align: center;
-    height: 100vh;
     color: black;
-    
+
 }
 
 .navbar {
@@ -81,7 +78,22 @@ body {
     font-size: 15px
 }
 #time {
-    font-size: 2rem;
+    font-size: 15px;
     margin-block-start: 3%;
-    margin-left: 3%;    
+    padding-left: 15px;
+    color: rgb(152, 53, 209);   
+    margin-top: 4%;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+
+}
+#title{
+    font-family: 'Anton', sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+    color: var(--primary-color);    /* Using hex value stored in variables. */
+    padding-left: 15px;
+    position: fixed;
+    width: 100%;
+    top: 0;
 }
