@@ -14,6 +14,11 @@ Campus connect web app.
 * request
 * react
 * react-redux
+* moment
+* axios
+* react-moment
+* uuid
+* redux-thunk
 
 ## Contributors
 * Pratik
