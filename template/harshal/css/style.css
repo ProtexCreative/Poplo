@@ -1,0 +1,26 @@
+/*
+    Add comments properly.
+*/
+
+body {
+    background-color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+    color: #425cd1;
+    margin: 0%
+}
+
+.header-top {
+    margin: 1%;
+}
+
+.content-section {
+    margin: 1%
+}
+
+.footer-bottom {
+    background-color: #2a2b2a;
+    color: #ffffff;
+    padding-top: 30px;
+    padding-bottom: 2px;
+    text-align: center
+}
