@@ -1,8 +1,6 @@
 // DOM Elements
 const time = document.getElementById('time'),
-  greeting = document.getElementById('greeting'),
-  name = document.getElementById('name'),
-  focus = document.getElementById('focus');
+
 
 // Options
 const showAmPm = true;
@@ -33,56 +31,10 @@ function addZero(n) {
   return (parseInt(n, 10) < 10 ? '0' : '') + n;
 }
 
-// Set Background and Greeting
-function setBgGreet() {
-  let today = new Date(),
-    hour = today.getHours();
-
-  if (hour < 12) {
-    // Morning
-    document.body.style.backgroundImage = "url('https://i.ibb.co/7vDLJFb/morning.jpg')" ;
-    greeting.textContent = 'Good Morning, ';
-  } else if (hour < 18) {
-    // Afternoon
-    document.body.style.backgroundImage = "url('https://i.ibb.co/3mThcXc/afternoon.jpg')";
-    greeting.textContent = 'Good Afternoon, ';
-  } else {
-    // Evening
-    document.body.style.backgroundImage = "url('https://i.ibb.co/924T2Wv/night.jpg')";
-    greeting.textContent = 'Good Evening, ';
-    document.body.style.color = 'white';
-  }
-}
-
-// Get Name
-function getName() {
-  if (localStorage.getItem('name') === null) {
-    name.textContent = '[Enter Name]';
-  } else {
-    name.textContent = localStorage.getItem('name');
-  }
-}
-
-// Set Name
-function setName(e) {
-  if (e.type === 'keypress') {
-    // Make sure enter is pressed
-    if (e.which == 13 || e.keyCode == 13) {
-      localStorage.setItem('name', e.target.innerText);
-      name.blur();
-    }
-  } else {
-    localStorage.setItem('name', e.target.innerText);
-  }
-}
 
 
-
-
-name.addEventListener('keypress', setName);
-name.addEventListener('blur', setName);
 
 // Run
 showTime();
-setBgGreet();
-getName();
+
+
