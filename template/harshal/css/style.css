@@ -8,8 +8,6 @@
     --success-color: #1ece76;
 }
 
-
-
 * {
     box-sizing: border-box;
     margin: 0;
@@ -160,4 +158,13 @@ section#tag {
 }
 .navbar-colored {
     background-color:rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    color: var(--primary-color);
+    font-family: 'Roboto', sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    padding-left: 10px;
+    display: flex
 }
