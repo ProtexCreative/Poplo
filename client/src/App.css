@@ -1,33 +1,129 @@
-.App {
-  text-align: center;
+/* :root {
+    --primary-color: #425cd1;
+    --light-color: #ffffff;
+    --back-color: #edf5f7;
+    --dark-color: #2a2b2a;
+    --gray-color: #474448;
+    --danger-color: #e33528;
+    --success-color: #1ece76;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--light-color);
+    color: var(--light-color);
+    height: 100vh;
+    line-height: 1.6;
+    overflow: hidden;
 }
 
-.App-link {
-  color: #61dafb;
+.container {
+    width: 100%;
+    height: 100%; */
+    /* CSS Smooth Scroll */
+    /* overflow-y: scroll; 
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+}
+#logo{
+    border-radius: 50px;    
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.lead {
+    font-size: 1.5rem;
 }
+
+.navbar {
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    display: flex;
+    width: 100%;
+    height: 60px;
+    background: rgba(0,0,0,0.7);
+    }
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    width: 100%;
+    justify-content: right;
+}
+
+.navbar ul li {
+    margin: 0 1rem;
+    padding: 1rem;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #f4f4f4;
+}
+
+.navbar ul li a:hover {
+    color: var(--primary-color);
+}
+
+.logo-front {
+    src: url("../src/img/Logo/Logo_Trans_Back_Blue_Rect.png")
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    height: 100vh;
+
+    /* Scroll Snap */
+    /* scroll-snap-align: center;
+}
+
+section h1 {
+    font-size: 4rem;
+}
+
+/* Section Images */
+/* section#home {
+    background: url("./img/Shapes/Ellipse_2_Cut.png") no-repeat center right; 
+    background-size: 70%;
+}
+
+section#about{
+    /* background: url("../img/bg/About.jpg") ; */
+    /* background-color: var(--primary-color);
+    z-index: 1;
+    background-size: 100%;
+    padding-left: 10px;
+    padding-right: 10px
+}
+
+section#developers {
+    text-align: start;
+    font-size: 50px;
+    color: var(--primary-color);
+    background-color: var(--light-color)
+}
+
+section#contact {
+    text-align: start;
+    font-size: 50px;
+    color: var(--light-color);
+    background-color: var(--primary-color)
+}
+
+.footer_bottom {
+    color: var(--gray-color);
+    background-color: var(--dark-color)
+} */ 
