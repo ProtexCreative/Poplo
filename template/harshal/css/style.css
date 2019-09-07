@@ -124,13 +124,14 @@ section#contact {
     height: 80vh;
 }
 section#tag {
-    font-size: 10px;
+    font-size: 20px;
     color: var(--light-color);
     background-color: var(--dark-color);
     height: 10vh;
     flex-direction: row;
     align-items: center;
     justify-content: left;
+    
 }
 .navbar-colored {
     background-color:rgba(0, 0, 0, 0.1);
