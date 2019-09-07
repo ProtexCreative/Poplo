@@ -36,7 +36,11 @@ body {
 #logo{
     border-radius: 50px;    
 }
-
+nav a img{
+    width: 60px;
+    margin-left: 10%;
+}
+}
 .lead {
     font-size: 1.5rem;
 }
@@ -60,16 +64,23 @@ body {
 .navbar-home ul li {
     margin: 0 1rem;
     padding: 1rem;
+    border-radius: 20px;
+    border-color: black;
+    border:  2px;
 }
 
 .navbar-home ul li a {
     text-decoration: none;
     text-transform: uppercase;
     color: var(--light-color);
+    border-block: 1px solid white;
+
 }
 
 .navbar-home ul li a:hover {
     color: skyblue;
+    font-size:20px;
+    border-block: 3px solid white;
 }
 
 section {
