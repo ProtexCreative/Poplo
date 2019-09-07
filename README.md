@@ -1,7 +1,7 @@
 # Poplo
 Campus connect web app.
 
-## Packages
+## Packages Used
 * express
 * express-validator
 * nodemon
