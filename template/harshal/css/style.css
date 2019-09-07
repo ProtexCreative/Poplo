@@ -1,26 +1,73 @@
 /*
-    Add comments properly.
+    Add appropriate comments.
+    Use variables to store hex value.
+    Font weight 400 means Regular, 700 means Bold. [For Roboto]
 */
 
-body {
-    background-color: #ffffff;
+:root {
+    --primary-color: #425cd1;
+    --light-color: #ffffff;
+    --back-color: #edf5f7;
+    --dark-color: #2a2b2a;
+    --gray-color: #474448;
+    --danger-color: #e33528;
+    --success-color: #1ece76;
+}
+
+/* '*' means that the properties apply to all the elements. */
+* {
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0
+}
+
+ul {
+    list-style-type: none;
+    overflow: hidden;
+}
+
+li a {
+    display: block;
+    text-decoration: none;
     font-family: 'Roboto', sans-serif;
-    color: #425cd1;
-    margin: 0%
+    font-weight: 400;
+    color: var(--light-color);
+    text-align: center;
+    padding: 14px 16px;
+    float: right
 }
 
-.header-top {
-    margin: 1%;
+/* Body */
+body {
+    background-image: url('../img/Shapes/Ellipse_2_Cut.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: right top;
+    background-size: 70%
 }
 
-.content-section {
-    margin: 1%
+.navbar {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    color: var(--primary-color);    /* Using hex value stored in variables. */
+    padding-left: 10px;
+    position: fixed;
+    width: 100%;
+    top: 0;
 }
 
 .footer-bottom {
-    background-color: #2a2b2a;
-    color: #ffffff;
-    padding-top: 30px;
-    padding-bottom: 2px;
-    text-align: center
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: var(--dark-color);
+    color: var(--light-color);
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 15px
 }
