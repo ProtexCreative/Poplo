@@ -71,3 +71,8 @@ body {
     font-weight: 400;
     font-size: 15px
 }
+#time {
+    font-size: 2rem;
+    margin-block-start: 3%;
+    margin-left: 3%;    
+}
