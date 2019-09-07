@@ -66,7 +66,6 @@ body {
     text-decoration: none;
     text-transform: uppercase;
     color: var(--light-color);
-    transition: 0.5s;
 }
 
 .navbar-home ul li a:hover {
