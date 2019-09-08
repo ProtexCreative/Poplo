@@ -28,10 +28,10 @@ const Navbar = () => {
             <div className="navbar-collapse collapse w-100 order-3 dual-collapse2">
                 <ul className="navbar-nav ml-auto">
                     <li className="nav-item">
-                        <a className="nav-link" href="/login">Login</a>
+                        <a className="nav-link" href="/login"><i className="fas fa-user"></i> Login</a>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link" href="/register">Register</a>
+                        <a className="nav-link" href="/register"><i className="fas fa-user-circle"></i> Register</a>
                     </li>
                 </ul>
             </div>
