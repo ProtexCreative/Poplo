@@ -4,45 +4,23 @@ import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 
 const Navbar = () => {
-    // const authLinks = (
-    //     <ul>
-    //         <li><Link to="#!">Home</Link></li>
-    //         <li><Link to="#!">Events</Link></li>
-    //         <li><Link to="#!">Updates</Link></li>
-    //         <li><Link to="#!">MatchR</Link></li>
-    //         <li><Link to="#!">BrooX</Link></li>
-    //         <li><Link to="#!">Notification</Link></li>
-    //         <li><Link to="#!">Profile</Link></li>
-    //     </ul>
-    // )
-
-    // const guestLinks = (
-    //     <ul>
-    //         <li><Link to="#About">About</Link></li>
-    //         <li><Link to="#About">Developers</Link></li>
-    //         <li><Link to="#About">Contact</Link></li>
-    //         <li><Link to="#About">Login</Link></li>
-    //         <li><Link to="#About">Register</Link></li>
-    //     </ul>
-    // )
-
-    // return (
-    //     <nav className="navbar">
-    //         <h1>
-    //             <Link to="/">
-    //                 Poplo
-    //             </Link>
-    //         </h1>
-    //         {(
-    //             <Fragment>{guestLinks}</Fragment>
-    //         )}
-    //     </nav>
-    // )
-
     return (
-        <h1>
-            Navbar
-        </h1>
+        <nav className="navbar navbar-expand-lg navbar-light bg-light">
+            <Link className="navbar-brand" to="/">Poplo</Link>
+            <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span className="navbar-toggler-icon"></span>
+            </button>
+            <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div className="navbar-nav">
+                    <Link className="nav-item nav-link active" to="/">Home <span className="sr-only">(current)</span></Link>
+                    <a className="nav-item nav-link" href="#">About</a>
+                    <a className="nav-item nav-link" href="#">Developer</a>
+                    <a className="nav-item nav-link" href="#">Contact</a>
+                    <Link className="nav-item nav-link" to="/login">Login</Link>
+                    <Link className="nav-item nav-link" to="/register">Register</Link>
+                </div>
+            </div>
+        </nav>
     )
 }
 
