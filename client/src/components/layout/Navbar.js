@@ -5,20 +5,35 @@ import PropTypes from 'prop-types'
 
 const Navbar = () => {
     return (
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">
-            <Link className="navbar-brand" to="/">Poplo</Link>
-            <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span className="navbar-toggler-icon"></span>
-            </button>
-            <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div className="navbar-nav">
-                    <Link className="nav-item nav-link active" to="/">Home <span className="sr-only">(current)</span></Link>
-                    <a className="nav-item nav-link" href="#">About</a>
-                    <a className="nav-item nav-link" href="#">Developer</a>
-                    <a className="nav-item nav-link" href="#">Contact</a>
-                    <Link className="nav-item nav-link" to="/login">Login</Link>
-                    <Link className="nav-item nav-link" to="/register">Register</Link>
-                </div>
+        <nav className="navbar navbar-expand-md navbar-light bg-light">
+            <div className="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
+                <ul className="navbar-nav mr-auto">
+                    <li className="nav-item">
+                        <a className="nav-link" href="/#about">About</a>
+                    </li>
+                    <li className="nav-item">
+                        <a className="nav-link" href="/#developers">Developers</a>
+                    </li>
+                    <li className="nav-item">
+                        <a className="nav-link" href="/#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <div className="mx-auto order-0">
+                <a className="navbar-brand mx-auto" href="/">Poplo</a>
+                <button className="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
+                    <span className="navbar-toggler-icon"></span>
+                </button>
+            </div>
+            <div className="navbar-collapse collapse w-100 order-3 dual-collapse2">
+                <ul className="navbar-nav ml-auto">
+                    <li className="nav-item">
+                        <a className="nav-link" href="/login">Login</a>
+                    </li>
+                    <li className="nav-item">
+                        <a className="nav-link" href="/register">Register</a>
+                    </li>
+                </ul>
             </div>
         </nav>
     )
