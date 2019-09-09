@@ -24,6 +24,7 @@ Campus connect web app.
 * Pratik
 * Harshal
 * Anurag
+* Mahesh
 * Kaif
 * Karan
 
