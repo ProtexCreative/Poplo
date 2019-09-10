@@ -1,10 +1,10 @@
 import React, { Fragment, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, Redirect } from 'react-router-dom'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types';
 import { login } from '../../actions/auth'
 
-const Login = ({ login }) => {
+const Login = ({ login, isAuthenticated }) => {
     // document.title = `Poplo: ${React.Component}`;
 
     const [formData, setFormData] = useState({
@@ -19,6 +19,11 @@ const Login = ({ login }) => {
     const onSubmit = async e => {
         e.preventDefault()
         login(username, password)
+    }
+
+    // Redirect if logged in
+    if (isAuthenticated) {
+        return <Redirect to="/home" />
     }
 
     return (
@@ -48,7 +53,14 @@ const Login = ({ login }) => {
 }
 
 Login.propTypes = {
-    login: PropTypes.func.isRequired
+    login: PropTypes.func.isRequired,
+    isAuthenticated: PropTypes.bool
 }
 
-export default connect(null, { login })(Login)
+const mapStateToProps = state => ({
+    isAuthenticated: state.auth.isAuthenticated
+})
+
+
+
+export default connect(mapStateToProps, { login })(Login)

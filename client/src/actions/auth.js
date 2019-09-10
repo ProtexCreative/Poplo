@@ -5,7 +5,8 @@ import {    // Redux actions import from types
     USER_LOADED,
     AUTH_ERROR,
     LOGIN_FAIL,
-    LOGIN_SUCCESS
+    LOGIN_SUCCESS,
+    LOGOUT
 } from './types'
 import { setAlert } from './alert'  // Redux methods
 import setAuthToken from '../utils/setAuthToken'    // Method to set the token from local storage to header
@@ -92,4 +93,9 @@ export const login = (username, password) => async dispatch => {
             type: LOGIN_FAIL
         })
     }
+}
+
+//Logout
+export const logout = () => async dispatch => {
+    dispatch({ type: LOGOUT })
 }
