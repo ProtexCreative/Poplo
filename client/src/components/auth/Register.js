@@ -18,7 +18,7 @@ const Register = ({ setAlert, register }) => {
 
     const onChange = e => setFormData({ ...formData, [e.target.name]: e.target.value })
 
-    const onSubmit = e => {
+    const onSubmit = async e => {
         e.preventDefault()
         if (password != password2) {
             setAlert('Passwords do not match.', 'danger', 5000)
@@ -54,9 +54,12 @@ const Register = ({ setAlert, register }) => {
                 </div>
                 <div className="form-group form-check">
                     <input type="checkbox" className="form-check-input" id="exampleCheck1" />
-                    <label className="form-check-label" for="exampleCheck1">I agree to the terms and conditions. <Link to="#">Read T&C</Link></label>
+                    <label className="form-check-label" htmlFor="exampleCheck1">I agree to the terms and conditions. <Link to="#">Read T&C</Link></label>
                 </div>
                 <button type="submit" className="btn btn-primary">Register</button>
+                <div className="form-group">
+                    Already have an account? <Link to="/login">Sign In</Link>
+                </div>
             </form>
         </Fragment>
     )

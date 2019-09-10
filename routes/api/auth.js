@@ -14,12 +14,26 @@ const auth = require('../../middleware/auth')   // Get the auth middleware.
 
 const User = require('../../models/Users')
 
+// @route   GET api/auth
+// @desc    Check if the user is authenticated 
+// @access  Private
+router.get('/', auth, async (req, res) => {
+    try {
+        const user = await User.findById(req.user.id).select('-password')
+        res.json(user)
+    } catch (err) {
+        console.error(err.message)
+        res.status(500).send('Server Error')
+    }
+})
+
 // @route   POST api/auth
 // @desc    Authenticate user & get Token
 // @access  Public
 router.post('/', [
-    check('password', 'Password is required.').exists(),   // Password should be of a minimum length. 
-    check('username', 'Username should be lowercase.').isLowercase()    // Username should be lowercase.
+    check('username', 'Username should be lowercase.').isLowercase(),    // Username should be lowercase.
+    check('password', 'Password is required.').exists()  // Password should be of a minimum length. 
+
 ], async (req, res) => {
     const errors = validationResult(req)    // Get all the errors from the request using validationResult
 
@@ -32,7 +46,7 @@ router.post('/', [
     try {
         let user = await User.findOne({ username })    // Get the user from the username.
 
-        if (!user) {     // If the user exists.
+        if (!user) {     // If the user does not exist.
             return res.status(400).json({ errors: [{ msg: 'Invalid Credentials.' }] })
         }
 
