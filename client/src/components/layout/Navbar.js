@@ -45,7 +45,7 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
 
     return (
         <nav className="navbar navbar-expand-md navbar-light bg-light">
-            {!loading && (<Fragment>{!isAuthenticated ? smLinks : ''}</Fragment>)}
+            {!loading && (<Fragment>{document.title === 'Poplo' ? smLinks : ''}</Fragment>)}
             <div className="mx-auto order-0">
                 <a className="navbar-brand mx-auto" href="/">Poplo</a>
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
