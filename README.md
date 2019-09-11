@@ -29,13 +29,5 @@ Campus connect web app.
 * uuid
 * redux-thunk
 
-## Contributors
-* Pratik
-* Harshal
-* Anurag
-* Mahesh
-* Kaif
-* Karan
-
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
