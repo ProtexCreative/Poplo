@@ -1,10 +1,11 @@
 import React, { Fragment, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, Redirect } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { setAlert } from '../../actions/alert'
+import { register } from '../../actions/auth'
 import PropTypes from 'prop-types';
 
-const Register = ({ setAlert }) => {
+const Register = ({ setAlert, register, isAuthenticated }) => {
     const [formData, setFormData] = useState({
         name: '',
         username: '',
@@ -17,13 +18,18 @@ const Register = ({ setAlert }) => {
 
     const onChange = e => setFormData({ ...formData, [e.target.name]: e.target.value })
 
-    const onSubmit = e => {
+    const onSubmit = async e => {
         e.preventDefault()
         if (password != password2) {
             setAlert('Passwords do not match.', 'danger', 5000)
         } else {
-            console.log(formData)
+            register({ name, username, email, password })
         }
+    }
+
+    // Redirect if logged in
+    if (isAuthenticated) {
+        return <Redirect to="/home" />
     }
 
     return (
@@ -53,16 +59,25 @@ const Register = ({ setAlert }) => {
                 </div>
                 <div className="form-group form-check">
                     <input type="checkbox" className="form-check-input" id="exampleCheck1" />
-                    <label className="form-check-label" for="exampleCheck1">I agree to the terms and conditions. <Link to="#">Read T&C</Link></label>
+                    <label className="form-check-label" htmlFor="exampleCheck1">I agree to the terms and conditions. <Link to="#">Read T&C</Link></label>
                 </div>
                 <button type="submit" className="btn btn-primary">Register</button>
+                <div className="form-group">
+                    Already have an account? <Link to="/login">Sign In</Link>
+                </div>
             </form>
         </Fragment>
     )
 }
 
+const mapStateToProps = state => ({
+    isAuthenticated: state.auth.isAuthenticated
+})
+
 Register.propTypes = {
-    setAlert: PropTypes.func.isRequired
+    setAlert: PropTypes.func.isRequired,
+    register: PropTypes.func.isRequired,
+    isAuthenticated: PropTypes.bool
 }
 
-export default connect(null, { setAlert })(Register)
+export default connect(mapStateToProps, { setAlert, register })(Register)
