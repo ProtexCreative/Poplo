@@ -3,9 +3,9 @@ Campus connect web app.
 
 ## Run Web App
     # Install all the packages
-    E:/Poplo> npm install express express-validator bcrypt config gravatar jsonwebtoken mongoose request 
-    E:/Poplo> npm install -D nodemon concurrently
-    E:/Poplo/client> npm install react react-redux axios uuid redux-thunk moment react-moment
+    E:/Poplo> npm install
+    E:/Poplo> cd client
+    E:/Poplo/client> npm install
 
     # Run the server and client
     E:/Poplo> npm run dev
