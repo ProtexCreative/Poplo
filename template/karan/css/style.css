@@ -1,0 +1,18 @@
+:root {
+    --primary-color: #425cd1;
+}
+body {
+    background-image: url('../img/Shapes/Ellipse_2_Cut.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: right top;
+    background-size: 70%
+}
+.navbar-brand {
+    color: var(--primary-color);
+    font-family: 'Roboto', sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    padding-left: 10px;
+    display: flex
+}
