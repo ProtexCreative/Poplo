@@ -3,7 +3,11 @@ import { Link, Redirect } from 'react-router-dom'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 
-const Landing = () => {
+const Landing = ({ isAuthenticated }) => {
+    if (isAuthenticated) {
+        return <Redirect to="/home" />
+    }
+
     return (
         <Fragment>
             <div className="container">
@@ -47,7 +51,7 @@ const Landing = () => {
                     <p className="lead">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi, quis!</p>
                 </section>
 
-                <section id="tag">
+                <section id="tag center">
                     <p>
                         <h4>© Protex Creative</h4>
                     </p>
@@ -58,4 +62,12 @@ const Landing = () => {
     )
 }
 
-export default Landing
+Landing.propTypes = {
+    isAuthenticated: PropTypes.bool
+}
+
+const mapStateToProps = state => ({
+    isAuthenticated: state.auth.isAuthenticated
+})
+
+export default connect(mapStateToProps)(Landing)
