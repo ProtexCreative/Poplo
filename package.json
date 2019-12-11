@@ -32,6 +32,7 @@
   },
   "devDependencies": {
     "concurrently": "^4.1.2",
-    "nodemon": "^1.19.2"
+    "nodemon": "^1.19.2",
+    "serialize-javascript": ">=2.1.1"
   }
 }
